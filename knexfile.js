@@ -1,5 +1,5 @@
 // Update with your config settings.
-require('dotenv').config({silent:true});
+require('dotenv').config();
 
 module.exports = {
   development: {
