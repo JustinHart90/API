@@ -1,27 +1,13 @@
-const path = require('path');
-
-
+// Update with your config settings.
+require('dotenv').config()
 module.exports = {
-
   development: {
-    client: 'postgresql',
-    connection: 'postgres://localhost:5432/node_jobs_dev',
-    migrations: {
-      directory: path.join(__dirname, 'db', 'migrations'),
-    },
-    seeds: {
-      directory: path.join(__dirname, 'db', 'seeds'),
-    },
+    client: 'pg',
+    connection: 'postgres://localhost/microlens'
   },
-  test: {
-    client: 'postgresql',
-    connection: 'postgres://localhost:5432/node_jobs_test',
-    migrations: {
-      directory: path.join(__dirname, 'db', 'migrations'),
-    },
-    seeds: {
-      directory: path.join(__dirname, 'db', 'seeds'),
-    },
-  },
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL
+}
 
-};
+}
