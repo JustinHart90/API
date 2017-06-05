@@ -6,7 +6,7 @@ exports.up = (knex) => {
     table.string('username').notNullable();
     table.string('password').notNullable();
     table.boolean('is_admin').notNullable().defaultTo(false);
-    table.string('age').notNullable();
+    table.integer('age').notNullable();
     table.string('sex').notNullable();
     table.string('weight').notNullable();
     table.timestamp('created_on').defaultTo(knex.fn.now())
