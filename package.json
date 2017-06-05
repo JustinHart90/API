@@ -2,9 +2,14 @@
   "name": "API",
   "version": "0.0.0",
   "private": false,
+  "description": "Quarter III - Micro Lens",
+  "main": "./bin/www",
   "scripts": {
+    "test": "./node_modules/mocha/bin/_mocha",
     "start": "node ./bin/www",
-    "test": "./node_modules/mocha/bin/_mocha"
+    "forever": "forever start ./bin/www",
+    "again": "forever restart ./bin/www",
+    "stop": "forever stopall"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
