@@ -1,7 +1,7 @@
 exports.up = (knex) => {
   return knex.schema.createTable('food_log', (table) => {
-    table.increments();
-    table.integer('user_id').references('id').inTable('users')
+    table.increments('id').references('id').inTable('users').onDelete('CASCADE')
+    table.string('user_id').notNullable()
     table.string('food_name').notNullable()
     table.integer('quantity').notNullable().defaultTo(1)
     table.string('size').notNullable()

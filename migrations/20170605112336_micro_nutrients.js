@@ -1,7 +1,7 @@
 exports.up = (knex) => {
   return knex.schema.createTable('micro_nutrients', (table) => {
     table.increments();
-    table.integer('food_id').references('id').inTable('food_log')
+    table.integer('food_id').references('id').inTable('food_log').onDelete('CASCADE')
     table.boolean('is_mineral').notNullable().defaultTo(false)
     table.string('is_vitamin').notNullable().defaultTo(false)
     table.string('is_phytonutrient').notNullable().defaultTo(false)

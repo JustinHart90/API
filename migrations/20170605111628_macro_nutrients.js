@@ -1,7 +1,7 @@
 exports.up = (knex) => {
   return knex.schema.createTable('macro_nutrients', (table) => {
     table.increments();
-    table.integer('food_id').references('id').inTable('food_log')
+    table.integer('food_id').references('id').inTable('food_log').onDelete('CASCADE')
     table.string('protein').notNullable()
     table.string('fats').notNullable()
     table.string('carbohydrates').notNullable()
