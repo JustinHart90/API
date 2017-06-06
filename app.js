@@ -26,6 +26,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/api/micro', micro);
+app.use('/test', (req, res) => {
+    res.send('route working!')
+});
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');
