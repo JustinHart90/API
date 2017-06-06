@@ -3,12 +3,13 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const pg = require('./db/connection');
 
 const micro = require('./routes/micro');
 
 const app = express();
 
-app.use(cors());
+app.use(cors(), (req, res, next) => {});
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
