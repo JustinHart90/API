@@ -11,7 +11,10 @@ router.get('/', (req, res, next) => {
       data: micro,
     });
   })
-  .catch((err) => { return next(err); });
+  .catch((err) => {
+    //   return next(err);
+    res.send(err);
+  });
 });
 
 module.exports = router;
