@@ -9,6 +9,12 @@ exports.seed = function(knex, Promise) {
             food_name: 'chicken',
             quantity: '3',
             size: 'medium',
+        },
+        {
+            user_id: '2',
+            food_name: 'spinach',
+            quantity: '1',
+            size: 'large',
         }
 
       ]);
