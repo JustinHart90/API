@@ -4,7 +4,7 @@ const router = express.Router();
 const queries = require('../db/queries.js');
 
 router.get('/', (req, res, next) => {
-  return queries.getAllJobs()
+  queries.getAllJobs()
   .then((jobs) => {
     res.json({
       status: 'success',
