@@ -1,7 +1,7 @@
 const knex = require('./connection');
 
-function getAllJobs() {
-  return knex('jobs').select();
+function getAllMicro() {
+  return knex('micro_nutrients').select();
 }
 
 function getSingleJob(jobId) {
