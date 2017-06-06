@@ -9,7 +9,7 @@ const micro = require('./routes/micro');
 
 const app = express();
 
-app.use(cors(), (req, res, next) => {});
+app.use(cors());
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -24,7 +24,6 @@ if (process.env.NODE_ENV !== 'test') {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use()
 
 app.use('/api/micro', micro);
 
