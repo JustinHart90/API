@@ -21,7 +21,7 @@ function removeJob(jobId) {
 }
 
 module.exports = {
-  getAllJobs,
+  getAllMicro,
   getSingleJob,
   addJob,
   updateJob,
