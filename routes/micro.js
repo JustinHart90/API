@@ -4,14 +4,15 @@ const router = express.Router();
 const queries = require('../db/queries.js');
 
 router.get('/', (req, res, next) => {
-  queries.getAllJobs()
-  .then((jobs) => {
-    res.json({
-      status: 'success',
-      data: jobs,
-    });
-  })
-  .catch((err) => { return next(err); });
+    res.send('api route')
+  // queries.getAllJobs()
+  // .then((jobs) => {
+  //   res.json({
+  //     status: 'success',
+  //     data: jobs,
+  //   });
+  // })
+  // .catch((err) => { return next(err); });
 });
 
 module.exports = router;
