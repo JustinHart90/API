@@ -3,8 +3,8 @@ exports.up = (knex) => {
     table.increments();
     table.integer('food_id').references('id').inTable('food_log').onDelete('CASCADE')
     table.boolean('is_mineral').notNullable().defaultTo(false)
-    table.string('is_vitamin').notNullable().defaultTo(false)
-    table.string('is_phytonutrient').notNullable().defaultTo(false)
+    table.boolean('is_vitamin').notNullable().defaultTo(false)
+    table.boolean('is_phytonutrient').notNullable().defaultTo(false)
     table.string('calcium')
     table.string('chromium')
     table.string('copper')
