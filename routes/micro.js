@@ -4,6 +4,7 @@ const router = express.Router();
 const queries = require('../db/queries');
 
 router.get('/', (req, res, next) => {
+console.log('We are not doing Heroku!');
   queries.getAllMicro()
   .then((micro) => {
     res.json({
@@ -12,8 +13,9 @@ router.get('/', (req, res, next) => {
     });
   })
   .catch((err) => {
+console.log(err);
       return next(err);
-    // res.json(err);
+     //res.json(err);
   });
 });
 
