@@ -1,12 +1,25 @@
 const knex = require('./connection');
 
 function getAllMicro() {
-  return knex('micro_nutrients').select();
+    return knex('micro_nutrients').select();
 }
 
 function getAllMacro() {
     return knex('macro_nutrients').select();
 }
+
+function getAllUsers() {
+    return knex('users').select();
+}
+
+function getAllLogs() {
+    return knex('food_log').select();
+}
+
+function postMicro() {
+    return knex('micro_nutrients').select().where('id', id);
+}
+
 
 // function getSingleJob(jobId) {
 //   return knex('jobs').select().where('id', jobId);
@@ -27,6 +40,9 @@ function getAllMacro() {
 module.exports = {
   getAllMicro,
   getAllMacro,
+  getAllUsers,
+  getAllLogs,
+  postMicro
   // getSingleJob,
   // addJob,
   // updateJob,

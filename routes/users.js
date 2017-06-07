@@ -3,16 +3,15 @@ const router = express.Router();
 const queries = require('../db/queries');
 
 router.get('/', (req, res, next) => {
-console.log('They see me routing!');
-  queries.getAllMacro()
-  .then((macro) => {
+  queries.getAllUsers()
+  .then((user) => {
     res.json({
       status: 'success',
-      data: macro
+      data: user
     });
   })
   .catch((err) => {
-console.log(err);
+console.log('They see me routing dirty!');
       return next(err);
      //res.json(err);
   });

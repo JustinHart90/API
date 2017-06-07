@@ -27,6 +27,8 @@ app.use(cookieParser());
 
 app.use('/api/micro', micro);
 app.use('/api/macro', macro);
+app.use('/api/users', user);
+app.use('/api/food_log', log);
 app.use('/test', (req, res) => {
     res.send('route working!')
 });
