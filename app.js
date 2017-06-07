@@ -3,7 +3,8 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const pg = require('./db/connection');
+const knex = require('./db/connection');
+const queries = require('./db/queries');
 
 const micro = require('./routes/micro');
 
