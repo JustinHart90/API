@@ -26,6 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/api/micro', micro);
+app.use('/api/macro', macro);
 app.use('/test', (req, res) => {
     res.send('route working!')
 });
@@ -41,7 +42,7 @@ app.use((err, req, res, next) => {
   const message = req.app.get('env') === 'development' ? err : {};
   res.status(err.status || 500);
   res.json({
-   	eugene_was_here: 'woot', 
+   	eugene_was_here: 'woot',
 	status: 'error',
     err,
   });

@@ -4,12 +4,12 @@ const router = express.Router();
 const queries = require('../db/queries');
 
 router.get('/', (req, res, next) => {
-console.log('We are not doing Heroku!');
-  queries.getAllMicro()
-  .then((micro) => {
+console.log('We are definitely not doing Heroku!');
+  queries.getAllMacro()
+  .then((macro) => {
     res.json({
       status: 'success',
-      data: micro
+      data: macro
     });
   })
   .catch((err) => {

@@ -4,6 +4,10 @@ function getAllMicro() {
   return knex('micro_nutrients').select();
 }
 
+function getAllMacro() {
+    return knex('macro_nutrients').select();
+}
+
 // function getSingleJob(jobId) {
 //   return knex('jobs').select().where('id', jobId);
 // }
@@ -22,6 +26,7 @@ function getAllMicro() {
 
 module.exports = {
   getAllMicro,
+  getAllMacro,
   // getSingleJob,
   // addJob,
   // updateJob,
