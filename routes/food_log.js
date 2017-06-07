@@ -5,10 +5,10 @@ const knex = require('../db/connection');
 
 router.get('/', (req, res, next) => {
   queries.getAllLogs()
-  .then((log) => {
+  .then((food_log) => {
     res.json({
       status: 'success',
-      data: log
+      data: food_log
     });
   })
   .catch((err) => {

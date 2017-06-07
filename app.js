@@ -6,7 +6,11 @@ const cors = require('cors');
 const knex = require('./db/connection');
 const queries = require('./db/queries');
 
+//routing
 const micro = require('./routes/micro');
+const macro = require('./routes/macro');
+const food_log = require('./routes/food_log');
+const users = require('./routes/users');
 
 const app = express();
 
@@ -28,8 +32,8 @@ app.use(cookieParser());
 
 app.use('/api/micro', micro);
 app.use('/api/macro', macro);
-app.use('/api/users', user);
-app.use('/api/food_log', log);
+app.use('/api/users', users);
+app.use('/api/food_log', food_log);
 app.use('/test', (req, res) => {
     res.send('route working!')
 });
