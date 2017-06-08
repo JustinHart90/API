@@ -28,6 +28,8 @@ function getIndividualMacro() {
 
 
 
+
+
 // function getSingleJob(jobId) {
 //   return knex('jobs').select().where('id', jobId);
 // }
