@@ -8,6 +8,7 @@ exports.up = (knex) => {
     table.integer('calories').notNullable()
     table.string('fibers').notNullable()
     table.string('sugars').notNullable()
+    table.string('water').notNullable()
   });
 };
 
