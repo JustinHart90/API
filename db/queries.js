@@ -16,9 +16,16 @@ function getAllLogs() {
     return knex('food_log').select();
 }
 
-function postMicro() {
-    return knex('micro_nutrients').select().where('id', id);
+function getIndividualMicro() {
+    return knex('micro_nutrients').select()
 }
+
+function getIndividualMacro() {
+    return knex('macro_nutrients').select()
+}
+
+
+
 
 
 // function getSingleJob(jobId) {

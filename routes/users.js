@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
     });
   })
   .catch((err) => {
-console.log('They see me routing dirty!');
+      console.log('They see me routing dirty!');
       return next(err);
      //res.json(err);
   });
