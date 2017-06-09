@@ -21,9 +21,6 @@ function getFood(id) {
 }
 
 
-
-
-
 function getAllFoodLogs() {
     return knex('food_log').select()
 }
@@ -36,13 +33,11 @@ function getIndividualMacro() {
     return knex('macro_nutrients').select().where('id', id);
 }
 
-function postFoodItem (id, macros, micros, name, quantity, measurement) {
-  console.log('helo');
-  console.log(id, name, quantity, measurement);
+function postFoodItem (macros, micros, name, quantity, measurement) {
   return knex('food_log')
     .returning('id')
     .insert({
-      user_id: id,
+      user_id: 10,
       food_name: name,
       quantity: quantity,
       size: measurement
@@ -92,6 +87,7 @@ module.exports = {
   getIndividualMicro,
   postMicros,
   postMacros
+
   // getSingleJob,
   // addJob,
   // updateJob,
