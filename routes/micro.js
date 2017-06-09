@@ -9,6 +9,7 @@ router.get('/:id', (req, res, next) => {
   console.log(req.params.id);
   queries.getIndividualMicro(req.params.id)
   .then((micro) => {
+    console.log(micro);
     res.json({
       status: 'success',
       data: micro
