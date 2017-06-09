@@ -63,7 +63,8 @@ module.exports = {
   getAllMicro,
   getAllMacro,
   getAllUsers,
-  getAllLogs
+  getAllLogs,
+  getUser
 
   // getSingleJob,
   // addJob,
