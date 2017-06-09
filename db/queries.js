@@ -83,8 +83,8 @@ module.exports = {
   getFood,
   postFoodItem,
   getIndividualMicro,
-  postNutrients,
   postMicros
+
   // getSingleJob,
   // addJob,
   // updateJob,
