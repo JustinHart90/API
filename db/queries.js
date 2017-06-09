@@ -17,7 +17,7 @@ function getUser(id) {
 }
 
 function getFood(id) {
-    return knex('food_log').select().where('id', id);
+    return knex('food_log').select().where('user_id', id);
 }
 
 
