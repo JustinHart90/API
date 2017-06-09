@@ -10,6 +10,7 @@ router.get('/:id', (req, res, next) => {
   queries.getIndividualMicro(req.params.id)
   .then((micro) => {
     console.log(micro);
+    console.log("helloweofwejfb");
     res.json({
       status: 'success',
       data: micro
