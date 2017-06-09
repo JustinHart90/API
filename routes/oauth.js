@@ -6,6 +6,31 @@ const request = require('request')
 const jwt = require('jwt-simple')
 const decode = require('jwt-decode')
 
+function findOrAddUser(profile){
+  knex('users').select().where('id', profile.id).then(data =>{
+    if(!data.length){
+      let obj = {
+        id: profile.id,
+        first_name: profile.first_name,
+        last_name: profile.last_name,
+        username: "",
+        password: "",
+        is_admin: false,
+        age: null,
+        sex: null,
+        weight: null
+      }
+      console.log(obj);
+      // knex('users').insert(obj).then(users=>{
+      //   res.send("success")
+      // })
+      // .catch(err=>console.log(err))
+    }
+  })
+}
+
+
+
 router.post('/', (req, res, next)=>{
   console.log(req.body);
   let fields = ['id', 'email', 'first_name', 'last_name', 'link', 'name'];
@@ -25,11 +50,15 @@ router.post('/', (req, res, next)=>{
     request.get({url:accessTokenUrl, qs: params, json:true}, function(error, response, body){
       console.log(body);
 
+
       request.get({ url: graphApiUrl, qs: body, json: true }, function(err, response, profile) {
         console.log(profile);
-      res.send(profile)
+
+      findOrAddUser(profile)
 
     })
+
+
 
     console.log(response);
 
