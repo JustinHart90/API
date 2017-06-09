@@ -14,7 +14,7 @@ console.log('We are not doing Heroku!');
     });
   })
   .catch((err) => {
-      console.log(e rr);
+      console.log(err);
       return next(err);
      //res.json(err);
   });
