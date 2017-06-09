@@ -9,7 +9,8 @@
     "start": "node ./bin/www",
     "forever": "forever start ./bin/www",
     "again": "forever restart ./bin/www",
-    "stop": "forever stopall"
+    "stop": "forever stopall",
+    "logs": "forever logs"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
