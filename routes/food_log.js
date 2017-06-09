@@ -47,9 +47,10 @@ router.post('/:id', (req, res, next) => {
     .then(food_id => {
       let foodId = food_id[0]
       micros["food_id"] = foodId
-      return queries.postMicros(micros)
+      queries.postMicros(micros)
+      return food_id
     })
-    .then(id => {
+    .then(food_id => {
       console.log(macros);
       console.log(food_id)
       let foodId = food_id[0]
