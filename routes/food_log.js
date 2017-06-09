@@ -37,12 +37,13 @@ console.log(err);
   });
 });
 
-router.post('/', (req, res, next) => {
+router.post('/:id', (req, res, next) => {
   let macros = req.body.macros
   let micros = req.body.micros
   let isVitamin = req.body.isVitamin
   let isMineral = req.body.isMineral
-  return queries.postFoodItem(macros, micros, req.body.name, req.body.quantity, req.body.measurement)
+  let id = req.params.id
+  return queries.postFoodItem(id, macros, micros, req.body.name, req.body.quantity, req.body.measurement)
     .then(food_id => {
       console.log(food_id)
       micros[food_id] = food_id

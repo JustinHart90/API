@@ -36,11 +36,13 @@ function getIndividualMacro() {
     return knex('macro_nutrients').select().where('id', id);
 }
 
-function postFoodItem (macros, micros, name, quantity, measurement) {
+function postFoodItem (id, macros, micros, name, quantity, measurement) {
+  console.log('helo');
+  console.log(id, name, quantity, measurement);
   return knex('food_log')
     .returning('id')
     .insert({
-      user_id: 10,
+      user_id: id,
       food_name: name,
       quantity: quantity,
       size: measurement
