@@ -30,7 +30,7 @@ function getIndividualMicro(id) {
 }
 
 function getIndividualMacro() {
-    return knex('macro_nutrients').select().where('id', id);
+    return knex('macro_nutrients').select().where('food_id', id);
 }
 
 function postFoodItem (id, macros, micros, name, quantity, measurement) {

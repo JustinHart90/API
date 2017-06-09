@@ -49,7 +49,6 @@ router.post('/:id', (req, res, next) => {
       micros["food_id"] = foodId
       console.log("Habaloobbba bahahahahablubababababab");
       console.log(micros);
-
       return queries.postMicros(micros)
     })
     .then(food_id => {
