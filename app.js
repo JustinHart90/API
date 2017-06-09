@@ -33,6 +33,8 @@ app.use(cookieParser());
 
 app.use('/auth/facebook', oauth);
 
+app.use('/users', users)
+
 app.use('/api/micro', micro);
 app.use('/api/macro', macro);
 
