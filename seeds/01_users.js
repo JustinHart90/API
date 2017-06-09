@@ -5,6 +5,7 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('users').insert([
         {
+            id: '10213378191847364',
             first_name: 'Jules',
             last_name: 'Perryman',
             username: 'jperryman',
@@ -15,6 +16,7 @@ exports.seed = function(knex, Promise) {
             weight: '170 lbs',
         },
         {
+            id: '10213378193746574',
             first_name: 'Derek',
             last_name: 'Kramer',
             username: 'dkramer',
@@ -25,6 +27,7 @@ exports.seed = function(knex, Promise) {
             weight: '300 lbs',
         },
         {
+            id: '102133710284536475',
             first_name: 'Tristan',
             last_name: 'Gilford',
             username: 'tgilford',
@@ -35,6 +38,7 @@ exports.seed = function(knex, Promise) {
             weight: '160 lbs',
         },
         {
+            id: '10213378191999196',
             first_name: 'Devin',
             last_name: 'Hanaway',
             username: 'dhanaway',
