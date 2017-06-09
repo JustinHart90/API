@@ -36,17 +36,6 @@ exports.seed = function(knex, Promise) {
             age: 29,
             sex: 'M',
             weight: '160 lbs',
-        },
-        {
-            id: '10213378191999196',
-            first_name: 'Devin',
-            last_name: 'Hanaway',
-            username: 'dhanaway',
-            password: 'tarheels',
-            is_admin:'true',
-            age: 27,
-            sex: 'M',
-            weight: '180 lbs',
         }
 
       ]);

@@ -14,19 +14,19 @@ console.log('We are not doing Heroku!');
     });
   })
   .catch((err) => {
-      console.log(err);
+      console.log(e rr);
       return next(err);
      //res.json(err);
   });
 });
 
-router.post('/:id', (req, res, next) => {
-    queries.postMicro(req.params.id)
-    .then(res => res)
-    .catch((err) => {
-        console.log(err);
-        return next(err);
-    });
-});
+// router.post('/:id', (req, res, next) => {
+//     queries.postMicro(req.params.id)
+//     .then(res => res)
+//     .catch((err) => {
+//         console.log(err);
+//         return next(err);
+//     });
+// });
 
 module.exports = router;
