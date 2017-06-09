@@ -5,7 +5,7 @@ exports.up = (knex) => {
     table.string('protein')
     table.string('fats')
     table.string('carbohydrates')
-    table.integer('calories')
+    table.string('calories')
     table.string('fibers')
     table.string('sugars')
     table.string('water')
