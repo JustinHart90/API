@@ -22,7 +22,6 @@ function findOrAddUser(profile){
       }
       console.log(obj);
       knex('users').insert(obj).then(users=>{
-        res.send("success")
       })
       .catch(err=>console.log(err))
     }
