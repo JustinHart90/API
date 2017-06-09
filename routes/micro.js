@@ -7,7 +7,7 @@ const knex = require('../db/connection');
 router.get('/:id', (req, res, next) => {
   console.log("nothing is happening");
   console.log(req.params.id);
-  queries.getIndividualMicro(req.params.id)
+  queries.getIndividualMicro(req.params.id.toString())
   .then((micro) => {
     console.log(micro);
     console.log("helloweofwejfb");

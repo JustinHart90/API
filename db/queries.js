@@ -86,6 +86,7 @@ module.exports = {
   getFood,
   postFoodItem,
   getIndividualMicro,
+  getIndividualMacro,
   postMicros,
   postMacros
 
