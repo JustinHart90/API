@@ -38,13 +38,14 @@ console.log(err);
 });
 
 router.post('/:id', (req, res, next) => {
-  let macros = req.body.macros
-  let micros = req.body.micros
+  let macros = req.body.macro
+  let micros = req.body.micro
   let isVitamin = req.body.isVitamin
   let isMineral = req.body.isMineral
   let id = req.params.id
   return queries.postFoodItem(id, macros, micros, req.body.name, req.body.quantity, req.body.measurement)
     .then(food_id => {
+      console.log(micros);
       console.log(food_id)
       let foodId = food_id[0]
       micros["food_id"] = foodId
