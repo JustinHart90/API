@@ -47,8 +47,9 @@ function postFoodItem (id, macros, micros, name, quantity, measurement) {
 function postMicros (micros) {
   console.log(micros);
   return knex('micro_nutrients')
-    .returning('id')
+    .returning('food_id')
     .insert(micros)
+
 }
 
 function postMacros (macros) {
