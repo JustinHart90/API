@@ -18,6 +18,21 @@ router.get('/', (req, res, next) => {
   });
 });
 
+router.get('/:id', (req, res, next) => {
+  queries.getUser(req.params.id)
+  .then((user) => {
+    res.json({
+      status: 'success',
+      data: user
+    });
+  })
+  .catch((err) => {
+      console.log('They see me routing dirty!');
+      return next(err);
+     //res.json(err);
+  });
+});
+
 
 
 module.exports = router;

@@ -12,6 +12,10 @@ function getAllUsers() {
     return knex('users').select();
 }
 
+function getUser(id) {
+    return knex('users').select().where('id', id);
+}
+
 function getAllLogs() {
     return knex('food_log').select();
 }
