@@ -59,8 +59,8 @@ module.exports = {
   getAllMicro,
   getAllMacro,
   getAllUsers,
-  getAllLogs,
-  postFoodItem
+  getAllLogs
+
   // getSingleJob,
   // addJob,
   // updateJob,
