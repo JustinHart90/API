@@ -56,6 +56,13 @@ function postMicros (micros) {
     .insert(micros)
 }
 
+function postMacros (macros) {
+  console.log(macros);
+  return knex('macro_nutrients')
+    .returning('id')
+    .insert(macros)
+}
+
 
 
 // function getSingleJob(jobId) {
@@ -83,8 +90,8 @@ module.exports = {
   getFood,
   postFoodItem,
   getIndividualMicro,
-  postMicros
-
+  postMicros,
+  postMacros
   // getSingleJob,
   // addJob,
   // updateJob,
