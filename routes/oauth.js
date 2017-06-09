@@ -21,10 +21,10 @@ function findOrAddUser(profile){
         weight: null
       }
       console.log(obj);
-      // knex('users').insert(obj).then(users=>{
-      //   res.send("success")
-      // })
-      // .catch(err=>console.log(err))
+      knex('users').insert(obj).then(users=>{
+        res.send("success")
+      })
+      .catch(err=>console.log(err))
     }
   })
 }
@@ -32,7 +32,7 @@ function findOrAddUser(profile){
 
 
 router.post('/', (req, res, next)=>{
-  console.log(req.body);
+  // console.log(req.body);
   let fields = ['id', 'email', 'first_name', 'last_name', 'link', 'name'];
   let graphApiUrl = 'https://graph.facebook.com/v2.5/me?fields=' + fields.join(',');
 
@@ -44,18 +44,18 @@ router.post('/', (req, res, next)=>{
       code: req.body.code,
       grant_type: 'authorization_code'
     };
-    console.log(params);
-    console.log("sucess");
+    // console.log(params);
+    // console.log("sucess");
 
     request.get({url:accessTokenUrl, qs: params, json:true}, function(error, response, body){
-      console.log(body);
+      // console.log(body);
 
 
       request.get({ url: graphApiUrl, qs: body, json: true }, function(err, response, profile) {
         console.log(profile);
 
       findOrAddUser(profile)
-
+      res.send("success")
     })
 
 
