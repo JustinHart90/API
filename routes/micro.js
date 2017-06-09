@@ -24,7 +24,7 @@ console.log('We are not doing Heroku!');
 router.get('/:id', (req, res, next) => {
   console.log("nothing is happening");
   console.log(req.params.id);
-  queries.getIndividualMicro(req.params.id)
+  queries.getIndividualMicro(+req.params.id)
   .then((micro) => {
     res.json({
       status: 'success',
