@@ -54,7 +54,7 @@ router.post('/', (req, res, next)=>{
         console.log(profile);
 
       findOrAddUser(profile)
-      res.send("success")
+      res.send(profile)
     })
 
 
