@@ -5,13 +5,13 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('food_log').insert([
         {
-            user_id: '10213378191999196',
+            user_id: '102133710284536475',
             food_name: 'chicken',
             quantity: '3',
             size: 'medium',
         },
         {
-            user_id: '10213378191999196',
+            user_id: '102133710284536475',
             food_name: 'spinach',
             quantity: '1',
             size: 'large',
