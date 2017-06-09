@@ -25,7 +25,7 @@ exports.up = (knex) => {
     table.string('vitamin_d')
     table.string('vitamin_e')
     table.string('vitamin_k')
-    table.string('thiamine')
+    table.string('thiamin')
     table.string('riboflavin')
     table.string('niacin')
     table.string('vitamin_b6')
