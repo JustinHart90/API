@@ -23,7 +23,7 @@ console.log(err);
 
 router.get('/:id', (req, res, next) => {
   console.log(req.params.id);
-  queries.getFood(req.params)
+  queries.getFood(req.params.id)
   .then((food_data) => {
     res.json({
       status: 'success',
