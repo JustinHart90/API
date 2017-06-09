@@ -16,8 +16,12 @@ function getUser(id) {
     return knex('users').select().where('id', id);
 }
 
-function getAllLogs() {
-    return knex('food_log').select();
+function getFood(id) {
+    return knex('food_log').select().where('id', id);
+}
+
+function getAllFoodLogs(id) {
+    return knex('food_log').select().where('id', id);
 }
 
 function getIndividualMicro() {
@@ -63,8 +67,9 @@ module.exports = {
   getAllMicro,
   getAllMacro,
   getAllUsers,
-  getAllLogs,
-  getUser
+  getAllFoodLogs,
+  getUser,
+  getFood
 
   // getSingleJob,
   // addJob,
