@@ -24,8 +24,8 @@ function getFood(id) {
 
 
 
-function getAllFoodLogs(id) {
-    return knex('food_log').select().where('id', id);
+function getAllFoodLogs() {
+    return knex('food_log').select()
 }
 
 function getIndividualMicro(id) {
