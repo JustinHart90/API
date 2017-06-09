@@ -38,10 +38,15 @@ console.log(err);
 });
 
 router.post('/', (req, res, next) => {
-  return queries.postFoodItem(req.body.macros, req.body.micros.minerals, req.body.micros.vitamins, req.body.name, req.body.quantity, req.body.measurement)
-    .then(id => {
-      console.log(id)
-      return queries.postNutrients()
+  let macros = req.body.macros
+  let micros = req.body.micros
+  let isVitamin = req.body.isVitamin
+  let isMineral = req.body.isMineral
+  return queries.postFoodItem(macros, micros, req.body.name, req.body.quantity, req.body.measurement)
+    .then(food_id => {
+      console.log(food_id)
+      micros[food_id] = food_id
+      return queries.postNutrients(micros)
     })
     .then(res => console.log(res))
     .catch(err => console.log(err))
