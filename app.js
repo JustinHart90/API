@@ -11,6 +11,7 @@ const micro = require('./routes/micro');
 const macro = require('./routes/macro');
 const food_log = require('./routes/food_log');
 const users = require('./routes/users');
+const oauth = require('./routes/oauth')
 
 const app = express();
 
@@ -29,6 +30,8 @@ if (process.env.NODE_ENV !== 'test') {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use('/auth/facebook', oauth);
 
 app.use('/api/micro', micro);
 app.use('/api/macro', macro);

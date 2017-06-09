@@ -48,8 +48,8 @@ module.exports = {
   getAllMicro,
   getAllMacro,
   getAllUsers,
-  getAllLogs,
-  postMicro
+  getAllLogs
+
   // getSingleJob,
   // addJob,
   // updateJob,
