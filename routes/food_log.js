@@ -22,8 +22,8 @@ console.log(err);
 // GET FOOD INFORMATION
 
 router.get('/:id', (req, res, next) => {
-  console.log(req.params.id.toString());
-  queries.getFood(req.params.toString())
+  console.log(req.params.id);
+  queries.getFood(req.params)
   .then((food_data) => {
     res.json({
       status: 'success',
