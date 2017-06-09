@@ -28,7 +28,7 @@ function getIndividualMacro() {
     return knex('macro_nutrients').select()
 }
 
-function postFoodItem (macros, minerals, vitamins, name, quantity, measurement) {
+function postFoodItem (macros, micros, name, quantity, measurement) {
   return knex('food_log')
     .returning('id')
     .insert({
@@ -39,7 +39,12 @@ function postFoodItem (macros, minerals, vitamins, name, quantity, measurement) 
     })
 }
 
-
+function postMicros (micros) {
+  console.log(micros);
+  return knex('micro_nutrients')
+    .returning('id')
+    .insert(micros)
+}
 
 
 
@@ -64,8 +69,8 @@ module.exports = {
   getAllMacro,
   getAllUsers,
   getAllLogs,
-  getUser
-
+  getUser,
+  postFoodItem
   // getSingleJob,
   // addJob,
   // updateJob,
