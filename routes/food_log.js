@@ -46,11 +46,12 @@ router.post('/:id', (req, res, next) => {
   return queries.postFoodItem(id, macros, micros, req.body.name, req.body.quantity, req.body.measurement)
     .then(food_id => {
       let foodId = food_id[0]
+      console.log("Habaloobbba bahahahahablubababababab");
+      console.log(micros);
       // micros.forEach(res=>{
       //   res["food_id"] = foodId[0]
       // })
-      console.log("Habaloobbba bahahahahablubababababab");
-      console.log(micros);
+
       queries.postMicros(micros)
       return food_id
     })
