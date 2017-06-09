@@ -28,7 +28,7 @@ exports.seed = function(knex, Promise) {
             vitamin_d:'5g',
             vitamin_e:'20g',
             vitamin_k: '.05g',
-            thiamine:'20g',
+            thiamin:'20g',
             riboflavin:'20g',
             niacin:'20g',
             vitamin_b6:'2g',
