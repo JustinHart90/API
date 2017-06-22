@@ -5,6 +5,7 @@ const knex = require('../db/connection');
 const request = require('request')
 const jwt = require('jwt-simple')
 const decode = require('jwt-decode')
+const bcrypt = require('bcrypt')
 
 function findOrAddUser(profile){
   knex('users').select().where('id', profile.id).then(data =>{
