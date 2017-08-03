@@ -4,7 +4,7 @@ require('dotenv').config({silent:true});
 module.exports = {
   development: {
    client: 'pg',
-   connection: process.env.DATABASE_URL || 'postgres://localhost:5432/mycro'
+   connection: process.env.DATABASE_URL
  },
  production: {
    client: 'pg',
